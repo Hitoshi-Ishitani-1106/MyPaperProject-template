@@ -1,5 +1,23 @@
 # MyPaperProject
 
+## Quick Start
+
+### Option A: Use this template（推奨）
+GitHub の "Use this template" ボタンをクリックし、自分のリポジトリとして作成してください。
+
+### Option B: ZIP ダウンロード
+Code → Download ZIP でダウンロードし、好きな場所に展開してください。
+
+### Option C: git clone
+```bash
+git clone https://github.com/dontstoptheparty-lang/MyPaperProject-template.git MyProject
+cd MyProject
+rm -rf .git
+git init
+```
+
+---
+
 複数論文を同一親ディレクトリで管理するための運用ルートです。
 
 ## ディレクトリ構成
