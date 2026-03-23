@@ -1,0 +1,4 @@
+interface:
+  display_name: "Title and Titlepage"
+  short_description: "タイトル案とタイトルページを作成"
+  default_prompt: "Use $paper-title-and-titlepage to draft titles and the title page."

@@ -1,0 +1,13 @@
+{
+  // 低リスクは自動許可（ドメインを限定）
+  "codex.web.allowedDomains": [
+    "eutils.ncbi.nlm.nih.gov",
+    "pubmed.ncbi.nlm.nih.gov"
+  ],
+  // 自動許可コマンドは最小限
+  "codex.shell.allowedCommands": ["curl"],
+
+  // セッション再利用で再承認を減らす
+  "codex.agent.reuseTerminal": true,
+  "codex.chat.preserveSession": true
+}

@@ -1,0 +1,10 @@
+title: "TBD Manuscript Title"
+author:
+  - name: "First Author"
+abstract: |
+  Placeholder abstract. Replace when generating final version.
+keywords:
+  - keyword1
+  - keyword2
+date: "\"${date}\""
+lang: en-US

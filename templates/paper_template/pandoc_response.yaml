@@ -1,0 +1,11 @@
+from: markdown
+citeproc: true
+csl: refs/vancouver.csl
+bibliography:
+  - refs/references.bib
+standalone: true
+to: docx
+output-dir: exports/rebuttal
+output-file: response_to_reviewers.docx
+input-files:
+  - rebuttal/response_to_reviewers.md

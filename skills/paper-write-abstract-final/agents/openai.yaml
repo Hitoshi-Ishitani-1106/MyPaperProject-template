@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Abstract Final"
+  short_description: "最終アブストラクトを作成"
+  default_prompt: "Use $paper-write-abstract-final to produce the final Abstract."

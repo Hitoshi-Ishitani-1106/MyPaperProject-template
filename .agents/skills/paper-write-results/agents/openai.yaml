@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Results"
+  short_description: "Resultsセクションを執筆"
+  default_prompt: "Use $paper-write-results to draft the Results section."

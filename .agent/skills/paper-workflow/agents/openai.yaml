@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Workflow"
+  short_description: "論文全体フローを順番に進めるスキル"
+  default_prompt: "Use $paper-workflow to guide the end-to-end manuscript workflow."

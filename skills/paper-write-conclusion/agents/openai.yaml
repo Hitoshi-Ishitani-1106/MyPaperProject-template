@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Conclusion"
+  short_description: "Conclusionセクションを執筆"
+  default_prompt: "Use $paper-write-conclusion to draft the Conclusion section."

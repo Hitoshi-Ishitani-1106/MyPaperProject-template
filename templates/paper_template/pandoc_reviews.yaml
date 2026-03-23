@@ -1,0 +1,7 @@
+from: markdown
+standalone: true
+to: docx
+output-dir: exports/reviews
+output-file: reviewer_comments.docx
+input-files:
+  - reviews/reviewer_comments_normalized.md

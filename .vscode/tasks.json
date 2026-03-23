@@ -1,0 +1,157 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build DOCX",
+      "type": "shell",
+      "command": "pandoc",
+      "args": [
+        "--defaults=pandoc.yaml"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "QA: refs-style",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/qa_references_style.py",
+        "--fix"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "QA: proofread-mark",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/qa_proofread_gate.py",
+        "--mark"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "QA: proofread-check",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/qa_proofread_gate.py",
+        "--check"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "QA: citation-web",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/qa_citation_web.py",
+        "--scope",
+        "all"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "QA: citations",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/qa_citations.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build: pandoc (gated)",
+      "type": "shell",
+      "dependsOn": [
+        "QA: refs-style",
+        "QA: citation-web",
+        "QA: citations"
+      ],
+      "dependsOrder": "sequence",
+      "command": "pandoc",
+      "args": [
+        "--defaults=pandoc.yaml"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build: qa-full (proofread enforced)",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "qa-full"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "SearchEvidence: run",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "../../skills/search-evidence-pubmed/scripts/build_evidence_block.py",
+        "--input",
+        "${input:searchEvidenceJson}",
+        "--template",
+        "../../skills/search-evidence-pubmed/assets/evidence_block_template.md",
+        "--out",
+        "${input:searchEvidenceBlock}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "SearchEvidence: qa",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "python ../../skills/search-evidence-pubmed/scripts/qa_pmids.py --input \"${input:searchEvidenceJson}\" && python ../../skills/search-evidence-pubmed/scripts/qa_evidence_block.py --block \"${input:searchEvidenceBlock}\""
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/papers/paper_A"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "searchEvidenceJson",
+      "type": "promptString",
+      "description": "Path to evidence JSON (data/search/...)",
+      "default": "data/search/evidence.json"
+    },
+    {
+      "id": "searchEvidenceBlock",
+      "type": "promptString",
+      "description": "Path to evidence block output (.md)",
+      "default": "data/search/evidence_block.md"
+    }
+  ]
+}

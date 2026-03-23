@@ -1,0 +1,24 @@
+from: markdown
+metadata-file:
+  - metadata.yaml
+citeproc: true
+csl: refs/vancouver.csl
+bibliography:
+  - refs/references.bib
+pdf-engine: xelatex
+standalone: true
+to: docx
+resource-path:
+  - sections
+  - data/figures
+  - data/tables
+  - .
+output-file: exports/manuscript.docx
+input-files:
+  - sections/00_titlepage.md
+  - sections/01_abstract.md
+  - sections/02_introduction.md
+  - sections/03_methods.md
+  - sections/04_results.md
+  - sections/05_discussion.md
+  - sections/06_conclusion.md

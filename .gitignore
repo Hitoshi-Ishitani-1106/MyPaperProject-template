@@ -1,0 +1,9 @@
+paper.docx
+/out/
+/data/
+/data/figures/
+/exports/
+/papers/*/data/
+/papers/*/data/figures/
+/papers/*/exports/
+.DS_Store
