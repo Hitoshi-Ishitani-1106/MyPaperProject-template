@@ -1,4 +1,0 @@
-interface:
-  display_name: "Incorporate Guidelines"
-  short_description: "投稿規定を要件定義とCSLに反映"
-  default_prompt: "Use $paper-incorporate-guidelines to integrate journal guidelines."

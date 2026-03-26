@@ -1,4 +1,0 @@
-interface:
-  display_name: "Paper Requirements"
-  short_description: "要件定義書を整備するためのスキル"
-  default_prompt: "Use $paper-requirements to update design/01_requirements.md."

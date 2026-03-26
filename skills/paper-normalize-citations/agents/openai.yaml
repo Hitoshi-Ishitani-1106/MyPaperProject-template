@@ -1,4 +1,0 @@
-interface:
-  display_name: "Normalize Citations"
-  short_description: "citekey整備とPMID置換を行う"
-  default_prompt: "Use $paper-normalize-citations to register citations and replace PMID placeholders."

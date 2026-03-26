@@ -1,4 +1,0 @@
-interface:
-  display_name: "Proofread All"
-  short_description: "全体校正レポートを作成"
-  default_prompt: "Use $paper-proofread-all to run a full manuscript proofread."

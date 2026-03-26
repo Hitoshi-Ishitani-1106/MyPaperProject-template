@@ -1,4 +1,0 @@
-interface:
-  display_name: "Write Methods"
-  short_description: "Methodsセクションを執筆"
-  default_prompt: "Use $paper-write-methods to draft the Methods section."

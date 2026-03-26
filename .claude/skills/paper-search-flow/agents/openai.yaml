@@ -1,4 +1,0 @@
-interface:
-  display_name: "Paper Search Flow"
-  short_description: "PubMed検索フローを実行するスキル"
-  default_prompt: "Use $paper-search-flow to run a literature search workflow."
