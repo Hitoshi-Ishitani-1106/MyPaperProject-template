@@ -29,10 +29,8 @@
 ## ルール反映の基本方針
 - 複数論文で再利用されるルールはこの親 `AGENTS.md` に反映する。
 - 論文固有の制約は `papers/<paper_id>/AGENTS.md` に反映する。
-- スキル固有の手順は `skills/<skill_name>/SKILL.md` に反映する。
-
+- スキル固有の手順は `.agents/skills/<skill_name>/SKILL.md` に反映する。
 ## Auto-updated preferences
-
 <!-- BEGIN AUTO_RULES -->
 Generated at: 2026-02-07T13:33:55
 Conditions: days=30, threshold=3, include-paper-rules=false
